@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Sorveteria - Felicidade em cada colherada</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-[#fffcf9] text-[#450920] font-sans antialiased">
+    <div class="flex flex-col md:flex-row min-h-screen">
+      <aside class="w-full md:w-64 bg-[#da627d] text-white flex flex-col justify-between p-6 md:fixed md:h-full z-20">
+        <div>
+          <div class="text-2xl font-bold tracking-wider mb-8 flex items-center gap-2">
+            <span>🍦</span> A Sorveteria
+          </div>
+          <nav aria-label="Barra de navegação" class="space-y-4">
+            <a aria-label="Início" href="#inicio" class="block py-2 px-4 rounded bg-[#ffa5ab]/30 font-semibold transition">Início</a>
+            <a aria-label="Cardápio de Chocolate" href="#cardapio" class="block py-2 px-4 rounded hover:bg-[#ffa5ab]/20 transition">Cardápio de Chocolate</a>
+            <a aria-label="Sobre Nós" href="#sobre" class="block py-2 px-4 rounded hover:bg-[#ffa5ab]/20 transition">Sobre Nós</a>
+          </nav>
+        </div>
+        <div aria-label="Rodapé" class="hidden md:block text-xs opacity-75 mt-8">
+          &copy; 2026 A Sorveteria.<br>Todos os direitos reservados.
+        </div>
+      </aside>
+      <main aria-label="Hero Section" class="flex-1 md:ml-64 flex flex-col">
+        <section id="inicio" class="relative w-full h-[85vh] md:h-[70vh] bg-[#f9dbbd] overflow-hidden flex items-center p-6 sm:p-12 md:p-16">
+          <img src="assets/Gemini_Generated_Image_fpxi5ofpxi5ofpxi.png" alt="Fundo Sorveteria" class="absolute inset-0 w-full h-full object-cover object-center pointer-events-none">
+          <div class="absolute inset-0 bg-gradient-to-r from-[#f9dbbd] via-[#ffa5ab] to-[#da627d] mix-blend-multiply opacity-80 pointer-events-none"></div>
+          <div class="relative z-10 max-w-xl bg-white/60 backdrop-blur-md p-6 sm:p-8 rounded-2xl border border-white/40 shadow-lg">
+            <span class="text-sm font-bold uppercase tracking-widest text-[#da627d] mb-2 block">Momento Gelado</span>
+            <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#450920] leading-tight mb-4">
+              Dinheiro não compra felicidade, mas compra sorvete, que é quase a mesma coisa!
+            </h1>
+            <a aria-label="Ver Cardápio" href="#cardapio" class="inline-block bg-[#450920] text-white font-semibold px-6 py-3 rounded-full hover:bg-[#da627d] transition shadow-md">
+              Ver Cardápio
+            </a>
+          </div>
+        </section>
+        <section aria-label="Cardápio" id="cardapio" class="py-16 px-6 sm:px-12 bg-[#fffcf9]">
+            <div class="max-w-5xl mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-[#450920]">Nossos Clássicos de Chocolate</h2>
+                    <p class="text-[#ffa5ab] font-medium mt-2">Feitos artesanalmente para derreter na boca</p>
+                    <div class="w-24 h-1 bg-[#ffa5ab] mx-auto mt-4 rounded-full"></div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div aria-label="Picolé Belga" class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition flex flex-col border border-[#f9dbbd]/40">
+                    <div class="h-64 overflow-hidden bg-gray-100">
+                        <img src="assets\3f3777c5-993e-47c5-8c9b-4ea07ce6029c.jpg" alt="Picolé de Chocolate Gourmet" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+                    </div>
+                <div class="p-6 flex-1 flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-xl font-bold text-[#450920] mb-2">Picolé Belga</h3>
+                        <p class="text-sm text-gray-600">Picolé cremoso de chocolate meio amargo com casquinha crocante e um toque de cacau em pó.</p>
+                    </div>
+                    <div class="mt-4 flex items-center justify-between">
+                        <span class="text-lg font-extrabold text-[#da627d]">R$ 12,00</span>
+                        <span class="text-xs bg-[#f9dbbd] text-[#450920] px-3 py-1 rounded-full font-semibold">Artesanal</span>
+                    </div>
+                </div>
+            </div>
+            <div aria-label="Sorvete de Chocolate na Taça" class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition flex flex-col border border-[#f9dbbd]/40">
+                <div class="h-64 overflow-hidden bg-gray-100">
+                    <img src="assets\Gemini_Generated_Image_exeau5exeau5exea.png" alt="Sorvete de Chocolate na Taça" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+                </div>
+                <div class="p-6 flex-1 flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-xl font-bold text-[#450920] mb-2">Taça Clássica</h3>
+                        <p class="text-sm text-gray-600">Duas bolas generosas de gelato de chocolate com calda quente e finalizado com uma framboesa fresca.</p>
+                    </div>
+                    <div class="mt-4 flex items-center justify-between">
+                    <span class="text-lg font-extrabold text-[#da627d]">R$ 18,50</span>
+                    <span class="text-xs bg-[#f9dbbd] text-[#450920] px-3 py-1 rounded-full font-semibold">Mais Pedido</span>
+                  </div>
+                </div>
+              </div>
+              <div aria-label="Sundae de Chocolate" class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition flex flex-col border border-[#f9dbbd]/40">
+                <div class="h-64 overflow-hidden bg-gray-100">
+                  <img src="assets\Gemini_Generated_Image_i56z84i56z84i56z.png" alt="Sundae de Chocolate" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+                </div>
+                <div class="p-6 flex-1 flex flex-col justify-between">
+                  <div>
+                    <h3 class="text-xl font-bold text-[#450920] mb-2">Sundae Supremo</h3>
+                    <p class="text-sm text-gray-600">Camadas intercaladas de sorvete premium, calda de chocolate, chantilly leve, granulados e a icônica cereja no topo.</p>
+                  </div>
+                  <div class="mt-4 flex items-center justify-between">
+                    <span class="text-lg font-extrabold text-[#da627d]">R$ 22,00</span>
+                    <span class="text-xs bg-[#f9dbbd] text-[#450920] px-3 py-1 rounded-full font-semibold">Completo</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section aria-label="Sobre Nós" id="sobre" class="bg-[#f9dbbd]/30 py-16 px-6 sm:px-12 border-t border-[#f9dbbd]/60">
+          <div class="max-w-3xl mx-auto text-center">
+            <h2 class="text-3xl font-bold text-[#450920] mb-4">Venha se derreter com a gente!</h2>
+            <p class="text-gray-700 leading-relaxed mb-6">
+              Preparamos cada receita com os melhores ingredientes selecionados, trazendo o balanço perfeito entre a doçura e o frescor que o seu dia merece. Nossos tons pastéis acolhem você para uma experiência inesquecível.
+            </p>
+            <div class="text-sm font-semibold text-[#da627d]">
+              📍 Rua dos Doces, 123 — Aberto todos os dias das 12h às 22h
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+
+  </body>
+</html>
