@@ -93,6 +93,31 @@
             </div>
           </div>
         </section>
+        <section aria-label="Contato" id="contato" class="bg-[#fffcf9] py-16 px-6 sm:px-12 border-t border-[#f9dbbd]/40">
+          <div class="max-w-xl mx-auto">
+            <div class="text-center mb-8">
+              <h2 class="text-3xl font-bold text-[#450920]">Fale Conosco</h2>
+              <p class="text-[#da627d] font-medium mt-2">Dúvidas, críticas ou elogios? Envie uma mensagem!</p>
+            </div>
+            <form action="#" id="form-contato" method="POST" class="space-y-5 bg-white p-6 sm:p-8 rounded-2xl shadow-md border border-[#f9dbbd]/40">
+              <div>
+                <label for="nome" class="block text-sm font-semibold text-[#450920] mb-1">Nome</label>
+                <input type="text" id="nome" name="nome" required placeholder="Seu nome completo" class="w-full px-4 py-2 rounded-xl border border-gray-300 focus:outline-none focus:border-[#da627d] focus:ring-1 focus:ring-[#da627d] transition">
+              </div>
+              <div>
+                <label for="email" class="block text-sm font-semibold text-[#450920] mb-1">E-mail</label>
+                <input type="email" id="email" name="email" required placeholder="seu.email@exemplo.com" class="w-full px-4 py-2 rounded-xl border border-gray-300 focus:outline-none focus:border-[#da627d] focus:ring-1 focus:ring-[#da627d] transition">
+              </div>
+              <div>
+                <label for="mensagem" class="block text-sm font-semibold text-[#450920] mb-1">Mensagem</label>
+                <textarea id="mensagem" name="mensagem" rows="4" required placeholder="Escreva sua mensagem aqui..." class="w-full px-4 py-2 rounded-xl border border-gray-300 focus:outline-none focus:border-[#da627d] focus:ring-1 focus:ring-[#da627d] transition resize-none"></textarea>
+              </div>
+              <button type="submit" class="w-full bg-[#450920] text-white font-semibold py-3 rounded-xl hover:bg-[#da627d] transition shadow-md font-medium tracking-wide">
+                Enviar Mensagem
+              </button>
+            </form>
+          </div>
+        </section>
         <section aria-label="Sobre Nós" id="sobre" class="bg-[#f9dbbd]/30 py-16 px-6 sm:px-12 border-t border-[#f9dbbd]/60">
           <div class="max-w-3xl mx-auto text-center">
             <h2 class="text-3xl font-bold text-[#450920] mb-4">Venha se derreter com a gente!</h2>
@@ -106,7 +131,23 @@
         </section>
       </main>
     </div>
+    
+    <script>
+      const form = document.getElementById('form-contato');
+      const nome = document.getElementById('nome');
+      const email = document.getElementById('email');
+      const mensagem = document.getElementById('mensagem');
 
+      form.addEventListener('submit', function(event) {
+        event.preventDefault();
+        if (nome.value.trim() === '' || email.value.trim() === '' || mensagem.value.trim() === '') {
+          alert('Por favor, preencha todos os campos antes de enviar.');
+          return;
+        }
+        alert(`Obrigado por entrar em contato, ${nome.value}! Sua mensagem foi recebida com sucesso. Responderemos em breve para ${email.value}.`);
+        form.reset();
+      });
 
+    </script>
   </body>
 </html>
