@@ -118,6 +118,16 @@
             </form>
           </div>
         </section>
+        <section class="bg-[#f9dbbd]/10 py-12 px-6 sm:px-12 border-t border-[#f9dbbd]/40">
+          <div class="max-w-xl mx-auto">
+            <div class="text-center mb-6">
+              <h2 class="text-2xl font-bold text-[´#450920]">Clientes Interessados</h2>
+              <p class="text-sm text-gray-600 mt-1">Quem já garantiu um momento mais doce no dia de hoje</p>
+            </div>
+            <ul id="nome-lista" class="grid grid-cols-1 sm:grid-cols-2 gap-3 max-h-60 overflow-y-auto pr-2">
+            </ul>
+          </div>
+        </section>
         <section aria-label="Sobre Nós" id="sobre" class="bg-[#f9dbbd]/30 py-16 px-6 sm:px-12 border-t border-[#f9dbbd]/60">
           <div class="max-w-3xl mx-auto text-center">
             <h2 class="text-3xl font-bold text-[#450920] mb-4">Venha se derreter com a gente!</h2>
@@ -137,6 +147,8 @@
       const nome = document.getElementById('nome');
       const email = document.getElementById('email');
       const mensagem = document.getElementById('mensagem');
+      const getList = document.getElementById('nome-lista');
+      let nomes = [];
 
       form.addEventListener('submit', function(event) {
         event.preventDefault();
@@ -145,6 +157,15 @@
           return;
         }
         alert(`Obrigado por entrar em contato, ${nome.value}! Sua mensagem foi recebida com sucesso. Responderemos em breve para ${email.value}.`);
+        nomes.push(nome.value);
+        getList.innerHTML = '';
+        nomes.forEach((nome) => {
+          const li = document.createElement('li');
+          li.textContent = nome;
+          li.className = "bg-white border border-[#f9dbbd]/60 text-[#450920] font-medium px-4 py-3 rounded-xl shadow-sm text-center flex items-center justify-center gap-2 before:content-['🍦']";
+          getList.appendChild(li);
+        });
+        console.log('Nomes enviados:', nomes);
         form.reset();
       });
 
